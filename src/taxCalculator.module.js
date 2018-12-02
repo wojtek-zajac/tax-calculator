@@ -1,1 +1,1 @@
-angular.module('taxCalculator', [])
+angular.module('taxCalculator', ['components'])

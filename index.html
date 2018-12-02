@@ -4,16 +4,21 @@
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
         <script src="./src/taxCalculator.module.js"></script>
         <script src="./src/components/components.module.js"></script>
-        <script src="./src/components/percentageCalculator/percantageCalculator.js"></script>
+        <script src="./src/components/percentageCalculator/percantageCalculator.component.js"></script>
     </head>
     <body>
-        <h1>Tax Calculator</h1>
-        <div>
-            <label>Price</label>
-            <input type="text" ng-model="priceInput" placeholder="0">
-        </div>
-        <div>
-            <p>Price is: {{priceInput}}</p>
-        </div>
+        <header>
+            <h1>Tax Calculator</h1>
+        </header>
+
+        <section>
+            <h3>Tax 18%</h3>
+            <calc-percent></calc-percent>
+        </section>
+        <hr>
+        <section>
+            <h3>Tax 32%</h3>
+            <calc-percent-range></calc-percent-range>
+        </section>
     </body>
 </html>
