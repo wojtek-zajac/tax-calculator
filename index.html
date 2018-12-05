@@ -1,5 +1,5 @@
 <!doctype html>
-<html ng-app="taxCalculator">
+<html>
     <head>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
         <script src="./src/taxCalculator.module.js"></script>
@@ -7,19 +7,24 @@
         <script src="./src/components/calcPercent/calcPercent.component.js"></script>
         <script src="./src/components/calcPercentRange/calcPercentRange.component.js"></script>
     </head>
-    <body>
+    <body ng-app="taxCalculator">
         <header>
             <h1>Tax Calculator</h1>
         </header>
 
         <section>
             <h3>Tax 18%</h3>
-            <calc-percent></calc-percent>
+            <calc-percent tax="18"></calc-percent>
         </section>
         <hr>
         <section>
             <h3>Tax 32%</h3>
-            <calc-percent-range></calc-percent-range>
+            <calc-percent-range tax="32"></calc-percent-range>
+        </section>
+        <hr>
+        <section>
+            <h3>Tax 7%</h3>
+            <calc-percent-range tax="7"></calc-percent-range>
         </section>
     </body>
 </html>
