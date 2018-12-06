@@ -1,1 +1,1 @@
-angular.module('components', [])
+const calcComponents = angular.module('components', []);

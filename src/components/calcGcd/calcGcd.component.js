@@ -1,4 +1,4 @@
-angular.module('components')
+calcComponents
     .component('calcGcd', {
         controller: controller,
         controllerAs: 'ctrl',
@@ -8,7 +8,7 @@ angular.module('components')
             '<button ng-click="ctrl.calc()">Calculate</button>' +
             '<p ng-hide="ctrl.resultHidden">Result: {{ ctrl.result }}</p>' +
             '<p ng-hide="ctrl.errorHidden">Values must be non-zero</p>'
-    })
+    });
 
 function controller() {
     const ctrl = this;
@@ -30,8 +30,8 @@ function controller() {
     function gcdCalc(a, b) {
         if (!b) {
             return a;
-        }
+        };
 
         return gcdCalc(b, a % b);
     };
-}
+};
