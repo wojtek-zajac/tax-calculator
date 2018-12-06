@@ -6,6 +6,7 @@
         <script src="./src/components/components.module.js"></script>
         <script src="./src/components/calcPercent/calcPercent.component.js"></script>
         <script src="./src/components/calcPercentRange/calcPercentRange.component.js"></script>
+        <script src="./src/components/calcGcd/calcGcd.component.js"></script>
     </head>
     <body ng-app="taxCalculator">
         <header>
@@ -25,6 +26,11 @@
         <section>
             <h3>Tax 7%</h3>
             <calc-percent-range tax="7"></calc-percent-range>
+        </section>
+        <hr>
+        <section>
+            <h3>Greatest common divisor</h3>
+            <calc-gcd></calc-gcd>
         </section>
     </body>
 </html>
