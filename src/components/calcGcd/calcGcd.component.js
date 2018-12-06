@@ -6,6 +6,7 @@ calcComponents
             '<label><input ng-model="ctrl.numberA" type="number"></label>' +
             '<label><input ng-model="ctrl.numberB" type="number"></label>' +
             '<button ng-click="ctrl.calc()">Calculate</button>' +
+            '<button ng-click="ctrl.reset()">Reset</button>' +
             '<p ng-hide="ctrl.resultHidden">Result: {{ ctrl.result }}</p>' +
             '<p ng-hide="ctrl.errorHidden">Values must be non-zero</p>'
     });
@@ -25,6 +26,10 @@ function controller() {
     ctrl.calc = () => {
         ctrl.result = gcdCalc(ctrl.numberA, ctrl.numberB);
         ctrl.resultHidden = false;
+    };
+
+    ctrl.reset = () => {
+        ctrl.$onInit();
     };
 
     function gcdCalc(a, b) {
