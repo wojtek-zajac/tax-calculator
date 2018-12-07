@@ -17,10 +17,7 @@ function controller() {
     const INPUT_INIT_VALUE = 1;
 
     ctrl.$onInit = () => {
-        ctrl.numberA = INPUT_INIT_VALUE;
-        ctrl.numberB = INPUT_INIT_VALUE;
-        ctrl.resultHidden = true;
-        ctrl.errorHidden = true;
+        setInitState();
     };
 
     ctrl.calc = () => {
@@ -29,7 +26,14 @@ function controller() {
     };
 
     ctrl.reset = () => {
-        ctrl.$onInit();
+        setInitState();
+    };
+
+    function setInitState() {
+        ctrl.numberA = INPUT_INIT_VALUE;
+        ctrl.numberB = INPUT_INIT_VALUE;
+        ctrl.resultHidden = true;
+        ctrl.errorHidden = true;
     };
 
     function gcdCalc(a, b) {
